@@ -1,0 +1,16 @@
+.plane-wrapper {
+    display: inline-block;
+    transform: rotate(180deg); /* Reverse the plane's front direction */
+    transition: transform 0.2s;
+    margin-bottom: 15px;
+    z-index: 1000; /* Set desired z-index */
+}
+.plane-wrapper i {
+    font-size: 24px;
+    color: black; /* Icon color changed to black */
+}
+.location-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+}

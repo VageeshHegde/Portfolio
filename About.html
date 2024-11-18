@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Vageesh</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+      }
+      body {
+        margin: auto;
+        width: 80%;
+        background-color: #f0f0f0;
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #0a1f44; /* Updated color */
+        margin-bottom: 10px;
+      }
+      h1 i {
+        margin-left: 5px;
+      }
+      hr {
+        border: 2px solid #0077b5; /* Updated color */
+        margin-bottom: 20px;
+      }
+      p {
+        text-align: justify;
+        line-height: 1.8;
+        color: #0a1f44; /* Updated color */
+      }
+      .plane-wrapper {
+        display: inline-block;
+        transform: rotate(180deg); /* Reverse the plane's front direction */
+        transition: transform 0.2s;
+        margin-bottom: 15px;
+        z-index: 1000; /* Set desired z-index */
+      }
+      .plane-wrapper i {
+        font-size: 24px;
+      }
+      .location-label {
+        font-size: 12px;
+        font-weight: bold;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <a href="new.html" style="text-decoration: none;"><h1>Vageesh Hegde (About)</h1></a>
+        </div>
+        <div class="col text-end">
+          <h1>
+            <!-- #7045d3 -->
+            <a href="new.html"><i class="fa-solid fa-house" style="color: #7045d3"></i></a>
+            <a href="https://github.com/VageeshHegde" target="_blank"><i class="fa-brands fa-github" style="color: #181717"></i></a>
+            <a href="https://www.linkedin.com/in/vageesh-hegde-ka/" target="_blank"><i class="fa-brands fa-linkedin" style="color: #0077b5"></i></a>
+            <!-- <a href="https://indigo-lissi-9.tiiny.site" target="_blank"><i class="fa-solid fa-file-pdf" style="color: #eace43;"></i></a> -->
+            <a href="https://indigo-lissi-9.tiiny.site" target="_blank"><i class="fa-solid fa-file-pdf" style="color: #ff0000;"></i></a>
+          </h1>
+        </div>
+      </div>
+      <hr style="color: #0a1f44" />
+      <div class="row">
+        <!-- Left Column: Text Content -->
+        <div class="col-md-7 text-body-primary">
+          <p class="text-body-primary">
+            Hi there! I’m Vageesh, your friendly neighborhood tech enthusiast. I’m passionate about web development—both frontend (because I like things to look pretty) and backend (because that’s where the magic happens). Oh, and let’s not forget databases—I enjoy organizing data so much that my friends joke I’d probably index my socks if I could!
+          </p>
+          <p>
+            I have a knack for problem-solving, whether it’s debugging code or figuring out why printers never work when you need them most. I’m always excited to connect with like-minded folks, so if you’ve got something tech-related or just want to chat about databases, feel free to reach out! My portfolio is a mix of my previous work, interests, and contact details—think of it as a techie’s personal diary, but way less awkward to read.
+          </p>
+          <p>
+            As lifelong students here on planet Earth, I’m still learning (and probably always will be). Whether it’s designing efficient systems, coding new features, or geeking out over the latest tech trends, I’m here for it. Let’s collaborate, innovate, and maybe even share a laugh or two along the way!
+          </p>
+          <!-- <p>
+            In my professional world, I juggle multiple roles—from full-stack
+            developer to database administrator, with a sprinkle of creative
+            problem-solver. I’ve worked on everything from social media
+            prototypes to IoT research, and even hotel management systems. One
+            of my most exciting challenges involved combining Neo4j and
+            Snowflake for a project that made data visualization and
+            relationship tracking incredibly intuitive. These experiences have
+            taught me the importance of adaptability, creative thinking, and the
+            occasional power nap when tackling complex challenges.
+          </p> -->
+        </div>
+
+        <!-- Right Column: Map -->
+        <div class="col-md-5">
+          <div id="map"></div>
+        </div>
+        <p>
+            I was born in a small town called Sirsi, India, where my journey began. For my bachelor’s degree, I moved to Bangalore—the Silicon Valley of India. During my time there, I not only completed my studies but also gained valuable experience through an internship. It was during this phase that I realized my growing interest in coding. I started leaning toward computer science, recognizing it as an essential skill in an era where machines and systems are becoming smarter through programming.
+        </p>
+        <p>
+            After completing my bachelor’s, I decided to take the leap and pursue my master’s degree in computer science at Frostburg State University in the United States. It was a significant shift, both geographically and academically, but one I knew was necessary to align my career with my interests and aspirations. Even now, I find myself continually learning and adapting, as technology—and the need for coding—never stops evolving.
+        </p>
+        <p>
+            Since childhood, I’ve been fascinated by building things and curious about how they work. As a lifelong LEGO fan (yes, even now!), I believe my love for building and creating stems from those early days of snapping bricks together. While I may not be building with LEGO today, I’m still creating—just in a more technical way. Now, I develop software and work on IT-related projects, channeling that same joy of building into the digital world.
+          </p>
+          <p>
+            I wouldn’t call myself an exceptional student, but I was always someone who prioritized enjoying what I was doing. That approach has taken me on a multidisciplinary journey: I hold a bachelor’s degree in mechanical engineering and a master’s degree in computer science. This diverse background has shaped me into a professional who can bridge disciplines, solve problems creatively, and adapt to new challenges with ease.
+          </p>
+        <p>
+            Outside of work, I’m a bit of a digital explorer. I love diving into new technologies, finding innovative ways to use them, and sharing what I learn with others. My interests also extend to marketing strategies, particularly those that connect people meaningfully—because technology isn’t just about what it can do; it’s about the lives it impacts.
+        </p>
+        <p>
+            But life isn’t all about tech! I’ve always believed in balancing creativity with curiosity. As a child, I enjoyed sketching—some of my drawings are still floating around somewhere (a few pictures are below for your amusement!). I also learned to play the tabla, a rhythmic Indian percussion instrument, which taught me discipline, rhythm, and patience (plus, it’s a great conversation starter). These days, I enjoy watching movies, exploring new destinations, and immersing myself in different cultures when I travel.
+        </p>
+        <p>
+            I believe these experiences, both creative and technical, have shaped me into a curious and open-minded individual. Whether I’m solving a technical problem or learning something new, I strive to bring the same enthusiasm and wonder I had as a kid discovering the world for the first time.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      // Initialize the map
+      const map = L.map("map").setView([15, 0], 1.3); // Centered at midpoint with zoom level 2
+
+      // Add OpenStreetMap tiles
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: "© OpenStreetMap contributors",
+      }).addTo(map);
+
+      // Coordinates
+      const indiaCoords = [12.9716, 77.5946]; // Bangalore, India
+      const usCoords = [38.9072, -77.0369]; // Washington, D.C., USA
+      const controlCoords = [70, -15]; // More curve adjustment
+
+      // Add location markers
+      const indiaMarker = L.marker(indiaCoords, {
+        title: "Bangalore, India",
+      }).addTo(map);
+      const usMarker = L.marker(usCoords, {
+        title: "Washington, D.C., USA",
+      }).addTo(map);
+
+      // Add name placeholders
+      indiaMarker
+        .bindPopup('<div class="location-label">Bangalore, India</div>')
+        .openPopup();
+      usMarker.bindPopup(
+        '<div class="location-label">Washington, D.C., USA</div>'
+      );
+
+      // Plane marker
+      const planeIcon = L.divIcon({
+        className: "plane-wrapper",
+        html: '<i class="fa-solid fa-plane-departure fa-flip-horizontal fa-xl" style="color: #0b61a2;"></i>',
+        iconSize: [24, 24],
+      });
+
+      const planeMarker = L.marker(indiaCoords, { icon: planeIcon }).addTo(map);
+
+      // Generate intermediate points along the curve
+      const generateCurvePoints = (start, control, end, steps) => {
+        const points = [];
+        for (let t = 0; t <= 1; t += 1 / steps) {
+          const lat =
+            (1 - t) * (1 - t) * start[0] +
+            2 * (1 - t) * t * control[0] +
+            t * t * end[0];
+          const lng =
+            (1 - t) * (1 - t) * start[1] +
+            2 * (1 - t) * t * control[1] +
+            t * t * end[1];
+          points.push([lat, lng]);
+        }
+        return points;
+      };
+
+      const pathPoints = generateCurvePoints(
+        indiaCoords,
+        controlCoords,
+        usCoords,
+        200
+      );
+
+      // Animation variables
+      let currentStep = 0;
+
+      const animatePlane = () => {
+        if (currentStep < pathPoints.length) {
+          const nextPosition = pathPoints[currentStep];
+          planeMarker.setLatLng(nextPosition); // Move the plane
+          currentStep++;
+          setTimeout(animatePlane, 20); // Adjust animation speed
+        }
+      };
+
+      animatePlane();
+
+      // Draw dotted path line for reference
+      L.polyline(pathPoints, {
+        color: "blue",
+        weight: 2,
+        dashArray: "5, 10", // Make the line dotted
+      }).addTo(map);
+    </script>
+  </body>
+</html>

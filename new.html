@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .business-card {
+            width: 100%;
+            max-width: 500px;
+            background-color: #0a1f44; /* Dark blue background color */
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d18feb;
+            margin: 0;
+            text-transform: uppercase;
+            font-family: 'Georgia', serif;
+        }
+        .title {
+            font-size: 16px;
+            color: #cccccc;
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            font-size: 14px;
+            color: #bbbbbb;
+            line-height: 1.6;
+        }
+        .contact-info h5 a {
+            color: #d18feb;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        .contact-info p {
+            margin: 4px 0;
+        }
+        .photo-frame {
+            width: 127px;
+            height: 187px;
+            background-color: #333;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 85%);
+            overflow: hidden;
+            border-radius: 64% 32% 30% 33% / 72% 10% 41% 26%; /* Custom border radius for whole frame */
+        }
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .globe-icon {
+            font-size: 18px;
+            color: #d18feb;
+            position: absolute;
+            top: 20px;
+            right: 160px;
+        }
+        .contact-info h5 a {
+        color: #d18feb;
+        text-decoration: none;
+        position: relative;
+    }
+        .contact-info h5 a:hover {
+        color: #ffffff;
+    }
+    
+    /* Tooltip */
+    .contact-info h5 a::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #ffffff;
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        opacity: 0;
+        visibility: hidden;
+        white-space: nowrap;
+        transition: opacity 0.3s, visibility 0.3s;
+        pointer-events: none;
+    }
+    .contact-info h5 a:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .business-card {
+                padding: 20px;
+                max-width: 90%;
+            }
+            .name {
+                font-size: 24px;
+            }
+            .title {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+            .contact-info {
+                font-size: 13px;
+            }
+            .photo-frame {
+                width: 100px;
+                height: 140px;
+                top: 20px;
+                right: 20px;
+            }
+            .globe-icon {
+                top: 10px;
+                right: 130px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .business-card {
+                padding: 15px;
+                max-width: 100%;
+            }
+            .name {
+                font-size: 20px;
+            }
+            .title {
+                font-size: 12px;
+            }
+            .contact-info {
+                font-size: 12px;
+            }
+            .photo-frame {
+                width: 80px;
+                height: 115px;
+                top: 50px;
+                right: 25px;
+            }
+            .globe-icon {
+                top: 5px;
+                right: 110px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="business-card">
+        <!-- <div class="globe-icon">🌐</div> -->
+        <h1 class="name">Vageesh Hegde</h1>
+        <p class="title">Software Developer | Database Administrator</p>
+        <div class="contact-info">
+            <h5>
+                <a href="https://github.com/VageeshHegde" target="_blank" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/vageesh-hegde-ka/" target="_blank" data-tooltip="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://indigo-lissi-9.tiiny.site" target="_blank" data-tooltip="Resume"><i class="fa-solid fa-file-pdf"></i></a>
+                <a href="About.html" data-tooltip="Profile"><i class="fa-solid fa-circle-user"></i></a>
+                <a href="#" data-tooltip="Projects"><i class="fa-solid fa-layer-group"></i></a>
+            </h5>
+            <p>+1 (301)-697-8582</p>
+            <p>vageeshdhegde99@gmail.com</p>
+            <p>Frostburg, MD, USA</p>
+        </div>
+        <div class="photo-frame">
+            <img src="Business.png" alt="Profile Picture">
+        </div>
+    </div>
+</body>
+</html>
